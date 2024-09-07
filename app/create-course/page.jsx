@@ -6,6 +6,9 @@ import {
   HiOutlineClipboardCheck,
   HiOutlineViewGrid,
 } from "react-icons/hi";
+import SelectCategory from "./_components/SelectCategory";
+import TopicDescription from "./_components/TopicDescription";
+import SelectOption from "./_components/SelectOption";
 
 const CreateCourse = () => {
   const StepperOption = [
@@ -55,6 +58,9 @@ const CreateCourse = () => {
 
       <div className='px-10 md:px-20 lg:px-44 mt-10'>
       {/* Component            */}
+      {ActiveIndex==0?<SelectCategory />:null}
+      {ActiveIndex==1?<TopicDescription />:null}
+      {ActiveIndex==2?<SelectOption />:null}
       {/* Next previous button */}
       <div className='flex justify-between'>
         <Button disabled={ActiveIndex == 0 } 
