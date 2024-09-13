@@ -7,12 +7,14 @@ const CreateCourseLayout = ({ children }) => {
     const [UserCourseInput, setUserCourseInput] = useState([]);
   return (
     <div>
-      <UserInputContext.Provider>
+      <UserInputContext.Provider value={{UserCourseInput, setUserCourseInput}}>
+
         <>
           <Header />
           {children}
         </>
       </UserInputContext.Provider>
+     
     </div>
   );
 };

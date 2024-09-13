@@ -70,7 +70,7 @@ export default function Page() {
           </p>
         </div>
 
-        <SignUp />
+  <SignUp />
       </div>
     </main>
   </div>
